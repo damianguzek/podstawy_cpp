@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+void funkcja(int *tab1,int *tab2,int *tab3,int roz){
+    int *tab4=new int[roz];
+    for(int i=0; i<roz; i++){
+        if(tab1[i]>=0) {tab4[i]=tab2[i];}
+        else {tab4[i]=tab3[i];}
+    }
+    for(int i=0; i<roz; i++){
+        cout<<tab4[i]<<"\t";
+    }
+}
+
+
+int main()
+{
+  cout<<"PODAJ LICZBE ELEMENTOW TABLICY"<<endl;
+  int liczba;
+  cin>>liczba;
+  int *tab1= new int[liczba];
+  int *tab2= new int[liczba];
+  int *tab3= new int[liczba];
+
+  cout<<"UZUPELNIJ TAB1"<<endl;
+  for(int i=0; i<liczba; i++ ){
+        cin>>tab1[i];
+  }
+
+  cout<<"UZUPELNIJ TAB2"<<endl;
+  for(int i=0; i<liczba; i++ ){
+        cin>>tab2[i];
+  }
+
+  cout<<"UZUPELNIJ TAB3"<<endl;
+  for(int i=0; i<liczba; i++ ){
+        cin>>tab3[i];
+  }
+funkcja(tab1,tab2,tab3,liczba);
+    return 0;
+}

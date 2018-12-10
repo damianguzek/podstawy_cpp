@@ -1,0 +1,39 @@
+#include <iostream>
+
+using namespace std;
+
+
+
+
+void jakas_funkcja(int liczba){
+    int suma = 0, max = 0;
+    int *tablica=new int[liczba];
+        for(int i=0;i<liczba;i++){
+            cin>>tablica[i];
+        }
+
+        for(int j=0;j<liczba;j++){
+            suma+=tablica[j];
+        }
+        for(int j=0;j<liczba;j++){
+            if(max<(*tablica)+j) max=tablica[j];
+            else continue;
+        }
+
+    cout<<max<< " wynik"<<endl;
+}
+
+
+
+int main()
+{
+  int liczba;
+  cin>>liczba;
+  jakas_funkcja(liczba);
+
+
+
+
+
+    return 0;
+}

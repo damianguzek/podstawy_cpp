@@ -1,0 +1,25 @@
+// Napisz bezparametrow¹ funkcjê, która rezerwuje pamiêæ na pojedyncz¹ zmienn¹ typu float
+// i zwraca adres zarezerwowanego obszaru pamiêci.
+
+
+
+#include <iostream>
+
+using namespace std;
+
+
+int *funkcja(){
+
+int *tablica=new int;
+
+return tablica;
+}
+
+int main() {
+    int a=200, b=4;
+   cout<<("%p\n",&a)<<endl;
+    printf("%p\n",&b);
+
+    printf("%p", funkcja());
+    return 0;
+}
